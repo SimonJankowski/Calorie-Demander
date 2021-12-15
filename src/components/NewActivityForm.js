@@ -80,7 +80,7 @@ class NewActivityForm extends React.Component {
                         <div className="four wide field">
                             Finish<input value={this.state.finishTime} name="finishTime" onChange={this.onFinishChange} type="time" min="00:01" max="24:00" required />
                         </div>
-                        <button className="ui button przycisk">Add</button>
+                        <button className="przycisk">Add</button>
 
                     </div>
                 </form>

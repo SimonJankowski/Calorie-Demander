@@ -1,6 +1,26 @@
+.App {
+ height: 100vh;
+    background-color: #b8b1a0;
+background: linear-gradient(to right, #dce35b, #45b649);
+font-family: 'Qahiri', sans-serif;
+
+}
+#userdata{
+  align-content: space-between !important;
+  justify-content: space-around !important;
+
+}
+.Calorie-Demander{
+text-align: center;
+font-family: 'Andalé Mono', monospace;
+font-size: 4rem;
+}
+
 .component{
-border: orange 1px solid;
+/* border: orange 1px solid; */
 margin-top: 2em;
+background-color: #b8b1a0;
+background-color: transparent
 }
 
 .personalizedResult{
@@ -10,6 +30,29 @@ align-items: center;
 
 .przycisk{
 margin-top: 1em !important;
+    background: none;
+    color:#151b29;
+    border: 2px solid;
+    padding: 1em 2em;
+    font-size:1em;
+    transition: all 0.25s, border-color 0.25s;
+/* margin-top: 1em !important;
 text-align: center !important;
-align-items: center !important;
+align-items: center !important; */
+}
+
+.przycisk:hover{
+    border-color:#f1ff1c;
+    color:white;
+    box-shadow: 0 0.5em 0.5em -0.4em #f1ff1c;
+    transform:translateY(-0.25em);
+    cursor:pointer;
+}
+
+#weightSelector{
+text-align: center;
+}
+
+#sexSelector{
+align-items: center;
 }

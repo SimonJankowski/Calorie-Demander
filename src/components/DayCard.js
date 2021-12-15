@@ -83,8 +83,8 @@ class DayCard extends React.Component {
     render() {
         return (
             <div className="component" >
-                <div className="ui container segment">
-                    <h1>daycard</h1>
+                <div className="ui container">
+                    <h1 className="Calorie-Demander">CALORIE-DEMANDER</h1>
                     <UserDataForm
                         dayModel={this.state.dayModel}
                         wynik={this.state.wynik}

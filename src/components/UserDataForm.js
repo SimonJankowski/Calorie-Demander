@@ -60,9 +60,9 @@ class UserDataForm extends React.Component {
         return (
             <div className="component">
                 <form className="ui form" onSubmit={this.onFormSubmit}>
-                    <div className="fields">
-                        <div className="three wide field">
-                            Choose: <select
+                    <div className="fields" id="userdata">
+                        <div className="four wide field" id="weightSelector">
+                            Select your weight: <select
                                 type="number"
                                 value={this.state.userWeight}
                                 onChange={this.onSelectChange}
@@ -73,8 +73,8 @@ class UserDataForm extends React.Component {
                             </select>
                         </div>
 
-                        <div className="three wide field">
-                            <p>Choose your sex: </p>
+                        <div className="three wide field" id="sexSelector">
+                            <p>Select your sex: </p>
                             <div>
                                 <input type="radio" id="man" name="sex" value="man"
                                     checked={this.state.userSex === "man"}
@@ -88,14 +88,17 @@ class UserDataForm extends React.Component {
                                 <label htmlFor="woman">Woman</label>
                             </div>
                         </div>
-                        <div className="three wide field">
-                            <button className="ui button przycisk">Personalise</button>
-                            <button type="button" onClick={this.fillUpGaps} className="ui button green przycisk">Fill up Gaps</button>
+                        <div className="four wide field">
+                            <button className="przycisk">PERSONALISE</button>
                         </div>
-                        <div className="three wide field">
-                            <button type="button" onClick={this.refreshPage} className="ui button red przycisk">reset</button>
+
+                        <div className="four wide field">
+                            <button type="button" onClick={this.fillUpGaps} className="przycisk">FILL UP GAPS</button>
                         </div>
-                        <div className="five wide field">
+                        <div className="four wide field">
+                            <button type="button" onClick={this.refreshPage} className="przycisk">RESET</button>
+                        </div>
+                        {/* <div className="five wide field">
                             Choose default Activity:<select disabled value={this.state.defaultActivity} onChange={this.onDefaultActivityChange} name="activity" className="ui fluid dropdown">
                                 <option value="" disabled>Activity</option>
                                 <option value="Sleeping|40">Sleeping</option>
@@ -103,7 +106,7 @@ class UserDataForm extends React.Component {
                                 <option value="Walking|120">Walking</option>
                                 <option value="Running|600">Running</option>
                             </select>
-                        </div>
+                        </div> */}
                     </div>
                 </form>
 
