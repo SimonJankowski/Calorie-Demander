@@ -9,9 +9,9 @@ class UserDataForm extends React.Component {
             userSex: "man",
             personalizedCalories: 0,
             defaultActivity: {
-                activity: "Sleeping|40",
-                activityName: "wklejone",
-                kcalPerHour: "40"
+                activity: "Scrolling Insta|60",
+                activityName: "Scrolling Insta",
+                kcalPerHour: "60"
             }
 
         }
@@ -23,7 +23,7 @@ class UserDataForm extends React.Component {
     //     defaultActivity: ""
     // }
     fillUpGaps = async (event) => {
-        if (!this.props.dayModel.length) return console.log("You have to put atleast 1 activity")
+        if (!this.props.dayModel.length) return alert("You have to put atleast 1 activity")
         await this.setState({ dayModel: fillUpDay(this.props.dayModel, this.state.defaultActivity) })
         console.log(this.state.dayModel)
         this.props.onGapsSubmit(this.props.dayModel)
@@ -58,45 +58,44 @@ class UserDataForm extends React.Component {
     }
     render() {
         return (
-            <div className="component">
-                <form className="ui form" onSubmit={this.onFormSubmit}>
-                    <div className="fields" id="userdata">
-                        <div className="four wide field" id="weightSelector">
-                            Select your weight: <select
+            <div className="">
+                <form className="" onSubmit={this.onFormSubmit}>
+                    <div className="row" id="userdata">
+                        <div className="col-12 col-md-3 col-sm-6" id="weightSelector">
+                            <p className="text-center"> Select your weight: </p><select
                                 type="number"
                                 value={this.state.userWeight}
                                 onChange={this.onSelectChange}
                                 name="userWeight"
-                                className="ui fluid dropdown"
+                                className="form-select"
                             >
                                 {this.weightRange()}
                             </select>
                         </div>
 
-                        <div className="three wide field" id="sexSelector">
-                            <p>Select your sex: </p>
-                            <div>
+                        <div className="col-12 col-md-3 col-sm-6" id="sexSelector">
+                            <p className="text-center">Select your sex: </p>
+                            <div className="form-check">
                                 <input type="radio" id="man" name="sex" value="man"
+                                    className="form-check-input"
                                     checked={this.state.userSex === "man"}
                                     onChange={this.onSexChange} />
                                 <label htmlFor="man">Man</label>
                             </div>
-                            <div>
+                            <div className="form-check">
                                 <input type="radio" id="woman" name="sex" value="woman"
+                                    className="form-check-input"
                                     checked={this.state.userSex === "woman"}
                                     onChange={this.onSexChange} />
-                                <label htmlFor="woman">Woman</label>
+                                <label className="form-check-label" htmlFor="woman">Woman</label>
                             </div>
                         </div>
-                        <div className="four wide field">
-                            <button className="przycisk">PERSONALISE</button>
-                        </div>
-
-                        <div className="four wide field">
+                        <div className="col-12 col-md-3 col-sm-6 text-center d-flex d-sm-block justify-content-evenly">
+                            <button className="mr-1 przycisk">PERSONALISE</button>
                             <button type="button" onClick={this.fillUpGaps} className="przycisk">FILL UP GAPS</button>
                         </div>
-                        <div className="four wide field">
-                            <button type="button" onClick={this.refreshPage} className="przycisk">RESET</button>
+                        <div className="col-12 col-md-3 col-sm-6 text-center d-flex align-items-center justify-content-center">
+                            <button type="button" onClick={this.refreshPage} className="align-items-center reset">RESET</button>
                         </div>
                         {/* <div className="five wide field">
                             Choose default Activity:<select disabled value={this.state.defaultActivity} onChange={this.onDefaultActivityChange} name="activity" className="ui fluid dropdown">

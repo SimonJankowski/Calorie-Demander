@@ -6,7 +6,7 @@ class App extends React.Component {
 
     render() {
         return (
-            <div className="App">
+            <div className="App d-flex flex-column vh-100">
                 <DayCard />
             </div>
         )

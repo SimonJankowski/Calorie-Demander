@@ -11,7 +11,7 @@ class DayCard extends React.Component {
         dayModelTotal: 0,
         defaultActivity: {
             activity: "Sleeping|40",
-            activityName: "wklejone",
+            activityName: "Sleeping",
             kcalPerHour: "40",
             userMultiplier: 100
         },
@@ -28,9 +28,9 @@ class DayCard extends React.Component {
 
     validateDay = (sortedDay) => {
         for (let i = 0; i < sortedDay.length - 1; i++) {
-            if (sortedDay[i].finishTimeNumber[0] > sortedDay[i + 1].startTimeNumber[0]) return (console.log("Wrong time's provided"))
+            if (sortedDay[i].finishTimeNumber[0] > sortedDay[i + 1].startTimeNumber[0]) return alert("Wrong time provided. You have to change time entries")
             if (sortedDay[i].finishTimeNumber[0] === sortedDay[i + 1].startTimeNumber[0]) {
-                if (sortedDay[i].finishTimeNumber[1] > sortedDay[i + 1].startTimeNumber[1]) return console.log("Wrong time's provided")
+                if (sortedDay[i].finishTimeNumber[1] > sortedDay[i + 1].startTimeNumber[1]) return alert("Wrong time's provided")
             }
         }
         console.log("valid activity")
@@ -82,9 +82,10 @@ class DayCard extends React.Component {
 
     render() {
         return (
-            <div className="component" >
-                <div className="ui container">
-                    <h1 className="Calorie-Demander">CALORIE-DEMANDER</h1>
+            <div className="container pt-5" >
+                <div className="">
+
+                    <h1 className="Calorie-Demander text-center"><img src="titlepng.png" /></h1>
                     <UserDataForm
                         dayModel={this.state.dayModel}
                         wynik={this.state.wynik}
