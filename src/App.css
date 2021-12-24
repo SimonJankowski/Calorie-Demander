@@ -1,15 +1,74 @@
-.component{
-border: orange 1px solid;
-margin-top: 2em;
+body {
+ height: 100vh;
+    background-color: #b8b1a0;
+    background: linear-gradient(to right, #a1ffce, #faffd1);
+    font-family: 'Andalé Mono', monospace;
+font-weight: 700;
+font-size: 1em;
 }
+
+/* div{
+border: orange 1px solid;
+} */
+/* }
+#userdata{
+  align-content: space-between !important;
+  justify-content: space-around !important;
+
+}
+.Calorie-Demander{
+text-align: center;
+font-family: 'Andalé Mono', monospace;
+font-size: 4rem;
+}
+
+
 
 .personalizedResult{
 text-align: center;
 align-items: center;
+} */
+
+.component{
+background-color: #b8b1a0;
+background-color: transparent;
+}
+.przycisk, .reset{
+font-family: 'Andalé Mono', monospace;
+font-weight: 700;
+margin-top: 0.5em;
+margin-bottom: 0.5em;
+    background: none;
+    color:#151b29;
+    border: 2px solid;
+    padding: 1em 1em;
+    font-size:1em;
+    transition: all 0.25s, border-color 0.25s;
+/* margin-top: 1em !important;
+text-align: center !important;
+align-items: center !important; */
 }
 
-.przycisk{
-margin-top: 1em !important;
-text-align: center !important;
-align-items: center !important;
+.przycisk:hover{
+    border-color:#f1ff1c;
+    color:#f1ff1c;
+    box-shadow: 0 0.5em 0.5em -0.4em #f1ff1c;
+    transform:translateY(-0.25em);
+    cursor:pointer;
 }
+
+.reset:hover{
+    border-color:hsl(2, 100%, 55%);
+    color:hsl(2, 100%, 55%);
+    box-shadow: 0 0.5em 0.5em -0.4em hsl(2, 100%, 55%);
+    transform:translateY(-0.25em);
+    cursor:pointer;
+}
+
+/* #weightSelector{
+text-align: center;
+}
+
+#sexSelector{
+align-items: center;
+} */
