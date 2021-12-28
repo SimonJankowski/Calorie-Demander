@@ -1,20 +1,21 @@
 {
   "files": {
-    "main.css": "/Calorie-Demander/static/css/main.db6c222d.chunk.css",
-    "main.js": "/Calorie-Demander/static/js/main.da44dc76.chunk.js",
-    "main.js.map": "/Calorie-Demander/static/js/main.da44dc76.chunk.js.map",
+    "main.css": "/Calorie-Demander/static/css/main.db257da8.chunk.css",
+    "main.js": "/Calorie-Demander/static/js/main.393d3da6.chunk.js",
+    "main.js.map": "/Calorie-Demander/static/js/main.393d3da6.chunk.js.map",
     "runtime-main.js": "/Calorie-Demander/static/js/runtime-main.c8515a4e.js",
     "runtime-main.js.map": "/Calorie-Demander/static/js/runtime-main.c8515a4e.js.map",
-    "static/js/2.b108bc8f.chunk.js": "/Calorie-Demander/static/js/2.b108bc8f.chunk.js",
-    "static/js/2.b108bc8f.chunk.js.map": "/Calorie-Demander/static/js/2.b108bc8f.chunk.js.map",
+    "static/js/2.3172f8d6.chunk.js": "/Calorie-Demander/static/js/2.3172f8d6.chunk.js",
+    "static/js/2.3172f8d6.chunk.js.map": "/Calorie-Demander/static/js/2.3172f8d6.chunk.js.map",
     "index.html": "/Calorie-Demander/index.html",
-    "static/css/main.db6c222d.chunk.css.map": "/Calorie-Demander/static/css/main.db6c222d.chunk.css.map",
-    "static/js/2.b108bc8f.chunk.js.LICENSE.txt": "/Calorie-Demander/static/js/2.b108bc8f.chunk.js.LICENSE.txt"
+    "static/css/main.db257da8.chunk.css.map": "/Calorie-Demander/static/css/main.db257da8.chunk.css.map",
+    "static/js/2.3172f8d6.chunk.js.LICENSE.txt": "/Calorie-Demander/static/js/2.3172f8d6.chunk.js.LICENSE.txt",
+    "static/media/titlepng.0302acf3.png": "/Calorie-Demander/static/media/titlepng.0302acf3.png"
   },
   "entrypoints": [
     "static/js/runtime-main.c8515a4e.js",
-    "static/js/2.b108bc8f.chunk.js",
-    "static/css/main.db6c222d.chunk.css",
-    "static/js/main.da44dc76.chunk.js"
+    "static/js/2.3172f8d6.chunk.js",
+    "static/css/main.db257da8.chunk.css",
+    "static/js/main.393d3da6.chunk.js"
   ]
 }
