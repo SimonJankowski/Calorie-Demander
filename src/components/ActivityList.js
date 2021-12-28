@@ -22,8 +22,8 @@ class ActivityList extends React.Component {
             <td data-label="activity">{row.activityName}</td>
             <td data-label="startTime">{row.startTime}</td>
             <td data-label="finishTime">{row.finishTime}</td>
-            <td data-label="duration">{row.duration} minutes</td>
-            <td data-label="duration" className="text-end">{row.kcalBurned}</td>
+            <td data-label="duration" className="d-none d-sm-table-cell">{row.duration} minutes</td>
+            <td data-label="duration" className="text-end d-none d-sm-table-cell">{row.kcalBurned}</td>
         </tr>
     })
 //     this.setState({ wynik: this.acumulate })
@@ -39,7 +39,6 @@ acumulate = () => {
     this.props.dayToRender.forEach((row) => sum = sum + row.kcalBurned)
     console.log(this.props.dayToRender[0])
     return Math.floor(sum)
-
 }
 
 render() {
@@ -48,16 +47,17 @@ render() {
             <table className="table table-bordered border-dark">
                 <thead>
                     <tr><th scope="col">Activity</th>
-                        <th scope="col">Start time</th>
+                        <th scope="col" >Start time</th>
                         <th scope="col">Finish time</th>
-                        <th scope="col">Duration</th>
-                        <th className="right aligned">kcal</th>
+                        <th scope="col" className="d-none d-sm-table-cell">Duration</th>
+                        <th className="right aligned" className="d-none d-sm-table-cell">kcal</th>
                     </tr></thead>
                 <tbody>
                     {this.renderList()}
-                    <tr className="table-danger">
-                        <td colSpan="3" className="left aligned">	&reg; Simon Jankowski </td>
-                        <td className="table-danger text-end" colSpan="2">Actual kcal demand: {this.acumulate()}</td>
+                    <tr id="score" className="table-danger">
+                        <td colSpan="2" className="left aligned">	&reg; Simon Jankowski </td>
+                        <td className="d-none d-sm-table-cell"></td>
+                        <td name="score" className="table-danger text-end" colSpan="2">Total needed: {this.acumulate()}</td>
                     </tr>
                 </tbody>
             </table>

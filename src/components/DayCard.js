@@ -3,6 +3,7 @@ import NewActivityForm from "./NewActivityForm";
 import ActivityList from "./ActivityList";
 import UserDataForm from "./UserDataForm";
 import { personalizeDay } from "./helpers";
+import logo from './titlepng.png';
 
 class DayCard extends React.Component {
     state = {
@@ -85,7 +86,7 @@ class DayCard extends React.Component {
             <div className="container pt-5" >
                 <div className="">
 
-                    <h1 className="Calorie-Demander text-center"><img src="titlepng.png" /></h1>
+                    <h1 className="Calorie-Demander text-center d-none d-sm-block"><img alt="logo" src={logo} /></h1>
                     <UserDataForm
                         dayModel={this.state.dayModel}
                         wynik={this.state.wynik}
